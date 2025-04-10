@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./Dashboard.css"; // We'll create this CSS file
 
 const templates = {
-  "!app": "OP at (Hospital) // (insurance) with eff date: (date) elig as per (portal) // DOS: (DOS) // MRI (part) // CPT: (CPT) Dx: (Dx) // PA req as per (portal) // PA approved via (portal) valid through (start)-(end) // auth #(num) // pc #(num) ",
-  "!den": "OP at (Hospital) // (insurance) with eff date: (date) elig as per (portal) // DOS: (DOS) // MRI (part) // CPT: (CPT) Dx: (Dx) // PA req as per (portal) // PA denied as per (portal) with case #(num) // denial reson: (reason) // pc #(num) ",
-  "!def": "OP at (Hospital) // (insurance) with eff date: (date) elig as per (portal) // DOS: (DOS) // MRI (part) // CPT: (CPT) Dx: (Dx) // (PA req?)",
-  "!nar": "OP at (Hospital) // (insurance) with eff date: (date) elig as per (portal) // DOS: (DOS) // MRI (part) // CPT: (CPT) Dx: (Dx) // no PA req as per (rep?) // callref #(num) ",
+  "!app": "OP at Hospital // insurance with eff date: date elig as per portal // DOS: DOS // MRI part // CPT: CPT Dx: Dx // PA req as per portal // PA approved via portal valid through start - end // auth #num // pc #num ",
+  "!den": "OP at Hospital // insurance with eff date: date elig as per portal // DOS: DOS // MRI part // CPT: CPT Dx: Dx // PA req as per portal // PA denied as per portal with case #num // denial reson: reason // pc #num ",
+  "!def": "OP at Hospital // insurance with eff date: date elig as per portal // DOS: DOS // MRI part // CPT: CPT Dx: Dx // PA req?",
+  "!narcall": "OP at Hospital // insurance with eff date: date elig as per portal // DOS: DOS // MRI part // CPT: CPT Dx: Dx // called #, no PA req as per rep? // callref #num ",
+  "!narportal": "OP at Hospital // insurance with eff date: date elig as per portal // DOS: DOS // MRI part // CPT: CPT Dx: Dx // no PA req as per portal? // pc # ",
 };
 
 export default function Dashboard() {
